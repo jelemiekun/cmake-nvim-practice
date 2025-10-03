@@ -1,23 +1,6 @@
 #include <iostream>
 #include <spdlog/spdlog.h>
-
-float calculateCGPA(const std::vector<float>& grades) {
-  spdlog::info("[CGPA]:Calculating CGPA...");
-  float average = 0.0f;
-  float sum = 0.0f;
-  int counter = 0;
-
-  for (const float& grade : grades) {
-    sum += grade;
-    counter++;
-    spdlog::info("[CGPA]: Iteration: {}", counter);
-  }
-
-  spdlog::info("[CGPA]: Calculating average...");
-  average = sum / counter;
-
-  return average;
-}
+#include "Math.h"
 
 int main (int argc, char *argv[]) {
   spdlog::info("Starting program...");
@@ -26,8 +9,12 @@ int main (int argc, char *argv[]) {
 
   std::vector<float> grades;
   grades.push_back(75.0f);
+  grades.push_back(89.5f);
+  grades.push_back(95.5f);
+  grades.push_back(96.25f);
+  grades.push_back(95.0f);
 
-  cgpa = calculateCGPA(grades);
+  cgpa = Math::calculateCGPA(grades);
 
   spdlog::info("CGPA result: {}", cgpa);
 
