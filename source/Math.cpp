@@ -1,7 +1,24 @@
 #include "Math.h"
 
-float Math::calculateCGPA(const std::vector<float>& grades) {
+void Math::init() {
   spdlog::info("[CGPA]: Initiating...");
+
+  float cgpa = 0.0f;
+
+  std::vector<float> grades;
+  grades.push_back(75.0f);
+  grades.push_back(89.5f);
+  grades.push_back(95.5f);
+  grades.push_back(96.25f);
+  grades.push_back(95.0f);
+
+  cgpa = Math::calculateCGPA(grades);
+
+  spdlog::info("[CGPA] Result: {}", cgpa);
+}
+
+float Math::calculateCGPA(const std::vector<float>& grades) {
+  spdlog::info("[CGPA]: Calculating Grade Summation...");
 
   int counter = 0;
   float sum = 0.0f;

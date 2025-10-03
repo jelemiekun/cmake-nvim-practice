@@ -3,6 +3,7 @@
 #include <vector>
 
 namespace Math {
+  void init();
   float calculateCGPA(const std::vector<float>& grades);
 }
 
