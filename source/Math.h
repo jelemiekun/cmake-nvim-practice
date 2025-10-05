@@ -1,9 +1,5 @@
-#pragma once 
-#include <spdlog/spdlog.h>
-#include <vector>
+#pragma once
 
 namespace Math {
-  void init();
-  float calculateCGPA(const std::vector<float>& grades);
+  float add(const  float& firstNumber, const float& secondNumber);
 }
-

@@ -5,10 +5,4 @@ project(myApp LANGUAGES CXX)
 add_executable(myExe main.cpp Math.cpp)
 
 find_package(spdlog REQUIRED)
-find_package(fmt REQUIRED)
-
-target_link_libraries(myExe
-    PRIVATE
-        spdlog::spdlog
-        fmt::fmt
-)
+target_link_libraries(myExe PRIVATE spdlog::spdlog)

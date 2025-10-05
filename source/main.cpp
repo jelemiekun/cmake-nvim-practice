@@ -5,7 +5,8 @@
 int main (int argc, char *argv[]) {
   spdlog::info("Starting program...");
 
-  Math::init();
+  Math::add(10, 5);
 
+  spdlog::info("Closing program...");
   return 0;
 }
